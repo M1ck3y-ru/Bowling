@@ -15,10 +15,10 @@ do {
 
 console.log(`D'accord, ${players} joueur(s).`);
 
-const selectedPlayers = [];
+const selectedPlayers = [];     // Tableau qui va stocker les noms des joueurs avec leur index
 
-for (let i = 0; i < players; i++) {
-  const playerName = prompt(`Entrez le nom du joueur ${i + 1}: `);
+for (let i = 0; i < players; i++) { // longueur de la boucle est égal au nombre de joueurs
+  const playerName = prompt(`Entrez le nom du joueur ${i + 1}: `); // 
   selectedPlayers.push(playerName);
 }
 
