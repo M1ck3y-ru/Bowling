@@ -23,7 +23,7 @@ Comment run le projet ?
 brew install node
 ```
 ```bash
-node nouvellePartie.js
+node partieGAME.js
 ```
 ```bash
 Au cas ou : 
