@@ -15,3 +15,14 @@ do {
 
 console.log(`D'accord, ${players} joueur(s).`);
 
+const selectedPlayers = [];
+
+for (let i = 0; i < players; i++) {
+  const playerName = prompt(`Entrez le nom du joueur ${i + 1}: `);
+  selectedPlayers.push(playerName);
+}
+
+console.log("Les joueurs sélectionnés sont :");
+selectedPlayers.forEach((player, index) => {
+  console.log(`Joueur ${index + 1}: ${player}`);
+});
