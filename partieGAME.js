@@ -116,3 +116,5 @@ for (let i = 0; i < scores.length; i++) {
 }
 
 console.log(`\nLe gagnant de la partie est : ${winner} avec un score de ${maxScore} points !`);
+
+//test commit
