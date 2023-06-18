@@ -90,3 +90,28 @@ scores.forEach((playerArray) => {
     console.log(`  ${frame}             ${frameScore}    `);
   });
 });
+
+// Winner Score
+// let maxScore = 0;
+//     let winners = [];
+
+//     for (const player of this.players) {
+//       const totalScore = player.getTotalScore();
+//       console.log(`${player.name}: ${totalScore}`);
+//       if (totalScore > maxScore) {
+//         maxScore = totalScore;
+//         winners = [player.name];
+//       } else if (totalScore === maxScore) {
+//         winners.push(player.name);
+//       }
+//     }
+
+//     if (winners.length === 1) {
+//       console.log(`\nLe gagnant est ${winners[0]} !`);
+//     } else {
+//       console.log("\nÉgalité! Les gagnants sont:");
+//       for (const winner of winners) {
+//         console.log(winner);
+//       }
+//     }
+// }
