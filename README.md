@@ -2,7 +2,7 @@
 ![Logo](https://img.freepik.com/premium-vector/bowling-logo-labels-badges_266639-32.jpg?w=2000)
 
 
-# RAID Bowling
+## 🎳 RAID Bowling
 
 L'objectif de ce TP est de développer une application en ligne de commande (CLI) en JavaScript qui simule le déroulement d'une partie de bowling.
 
@@ -11,11 +11,11 @@ L'objectif de ce TP est de développer une application en ligne de commande (CLI
 - [@Clement_GARCIA](https://ytrack.learn.ynov.com/git/gclement)
 
 - [@Edgar_CAVAILLEZ](https://ytrack.learn.ynov.com/git/cedgar)
-## ❓Informations
+## ❓ Informations
 
 Quelle version de node avoir : v20.3.0
 
-## 📟Deploiment
+## 📟 Déploiement
 
 Comment run le projet ?
 
@@ -33,7 +33,7 @@ https://serverspace.io/fr/support/help/how-to-install-node-js-on-ubuntu-20-04/?a
 ## 🚀 A PROPOS DE NOUS
 Nous sommes deux développeurs débutant dans la Programation en Javascript.
 
-## 📌CONTACTEZ NOUS :
+## 📌 CONTACTEZ NOUS :
 Pour un support, email edgar.cavaillez@ynov.com ou clement.garcia@ynov.com vous pouvez nous joindre.
 
 ## ⛔️ INFORMATIONS SUPPLEMENTAIRES
