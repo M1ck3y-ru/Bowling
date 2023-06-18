@@ -25,9 +25,8 @@ brew install node
 ```bash
 node partieGAME.js
 ```
-```bash
 Au cas ou : 
-
+```bash
 https://serverspace.io/fr/support/help/how-to-install-node-js-on-ubuntu-20-04/?attempt=1
 
 ```
