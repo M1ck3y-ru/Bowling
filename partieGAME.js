@@ -4,20 +4,20 @@ const ps = require("prompt-sync");
 const prompt = ps();
 
 do {
- var players = parseInt(prompt("Combien y a-t-il de joueurs (6 maximum) ? "));
+ var playersNumber = parseInt(prompt("Combien y a-t-il de joueurs (6 maximum) ? "));
   
- if (isNaN(players)) {
+ if (isNaN(playersNumber)) {
   console.log("Veuillez entrer un nombre valide.");
-} else if (players < 1 || players > 6) {
+} else if (playersNumber < 1 || playersNumber > 6) {
   console.log("Le nombre de joueurs doit être compris entre 1 et 6 inclus");
 }
-} while (isNaN(players) || players < 1 || players > 6);
+} while (isNaN(playersNumber) || playersNumber < 1 || playersNumber > 6);
 
-console.log(`D'accord, ${players} joueur(s). \n`);
+console.log(`D'accord, ${playersNumber} joueur(s). \n`);
 
 const amountOfPlayers = [];     // Tableau qui va stocker les noms des joueurs avec leur index
 
-for (let i = 0; i < players; i++) { // longueur de la boucle est égal au nombre de joueurs
+for (let i = 0; i < playersNumber; i++) { // longueur de la boucle est égal au nombre de joueurs
   const playerName = prompt(`Entrez le nom du joueur ${i + 1}: `); // i + 1 car tableau commence à 0 or le premier joueur sera le joueur 1 et pas le 0
   amountOfPlayers.push(playerName);  // push == append du go donc rajoute élément à fin de tableau
 }
@@ -50,7 +50,6 @@ for (let frame = 1; frame <= 10; frame++) {  // boucle qui représente le nombre
 
     let frameScore = firstThrow; // frame score sera égal au score du premier lancer puis du 2 qu'on rajoutera
   
-
     if (firstThrow === 10) { // si le premier lancer est 10 ça veut dire que c'est un strike
       console.log("Strike !");
     } else {
@@ -69,7 +68,7 @@ for (let frame = 1; frame <= 10; frame++) {  // boucle qui représente le nombre
       } 
     }
 
-    playerScore.push({ frame, frameScore,  });  // on fait un push (comme append du go) pour rajouter dans tableau
+    playerScore.push({ frame, frameScore,  });  // on fait un push (comme append du go) pour rajouter à playerScore le tour et le score du tour dans tableau
                                                                      // le tour le score du tour et le type de lancer du tour
     if (!scores[index]) { // si y'a pas de score à la case index alors 
       scores[index] = { player, playerScore }; // on remplie la case index avec le joueur et son score (pour le tableau des scores final)
@@ -79,34 +78,41 @@ for (let frame = 1; frame <= 10; frame++) {  // boucle qui représente le nombre
   });
 
 }
-console.log("\nScores finaux :");        // aperçu des scores
-scores.forEach((playerArray) => {
-  const { player, playerScore } = playerArray;
-  console.log(`\nJoueur : ${player}`);
-  console.log("Tour :  Quilles abattues  ");
-  playerScore.forEach((frameArray) => {
-    const { frame, frameScore,  } = frameArray;
-    console.log(`  ${frame}             ${frameScore}    `);
-  });
-});
-// WINNER //
+
+console.log("\nScores finaux :"); // aperçu des scores
+for (let i = 0; i < scores.length; i++) {
+  const playerArray = scores[i];
+  const player = playerArray.player;
+  const playerScore = playerArray.playerScore;
+  console.log(`\nJoueur : ${player}`); // aperçu nom du joueur
+  console.log("Tour :  Quilles abattues  "); // aperçu du tour et du score
+  for (let j = 0; j < playerScore.length; j++) {
+    const frameArray = playerScore[j];
+    const frame = frameArray.frame;
+    const frameScore = frameArray.frameScore;
+    console.log(`  ${frame}          ${frameScore}    `);
+  }
+}
+
 let maxScore = -1;
 let winner = "";
 
-scores.forEach((playerArray) => {
-  const { player, playerScore } = playerArray;
+for (let i = 0; i < scores.length; i++) {
+  const playerArray = scores[i];
+  const player = playerArray.player;
+  const playerScore = playerArray.playerScore;
   let totalScore = 0;
 
-  playerScore.forEach((frameArray) => {
-    const { frameScore } = frameArray;
+  for (let j = 0; j < playerScore.length; j++) {
+    const frameArray = playerScore[j];
+    const frameScore = frameArray.frameScore;
     totalScore += frameScore;
-  });
+  }
 
   if (totalScore > maxScore) {
     maxScore = totalScore;
     winner = player;
   }
-});
+}
 
 console.log(`\nLe gagnant de la partie est : ${winner} avec un score de ${maxScore} points !`);
-
