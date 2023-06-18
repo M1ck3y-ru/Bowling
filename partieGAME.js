@@ -79,7 +79,6 @@ for (let frame = 1; frame <= 10; frame++) {  // boucle qui représente le nombre
   });
 
 }
-
 console.log("\nScores finaux :");        // aperçu des scores
 scores.forEach((playerArray) => {
   const { player, playerScore } = playerArray;
@@ -91,27 +90,23 @@ scores.forEach((playerArray) => {
   });
 });
 
-// Winner Score
-// let maxScore = 0;
-//     let winners = [];
+let maxScore = -1;
+let winner = "";
 
-//     for (const player of this.players) {
-//       const totalScore = player.getTotalScore();
-//       console.log(`${player.name}: ${totalScore}`);
-//       if (totalScore > maxScore) {
-//         maxScore = totalScore;
-//         winners = [player.name];
-//       } else if (totalScore === maxScore) {
-//         winners.push(player.name);
-//       }
-//     }
+scores.forEach((playerArray) => {
+  const { player, playerScore } = playerArray;
+  let totalScore = 0;
 
-//     if (winners.length === 1) {
-//       console.log(`\nLe gagnant est ${winners[0]} !`);
-//     } else {
-//       console.log("\nÉgalité! Les gagnants sont:");
-//       for (const winner of winners) {
-//         console.log(winner);
-//       }
-//     }
-// }
+  playerScore.forEach((frameArray) => {
+    const { frameScore } = frameArray;
+    totalScore += frameScore;
+  });
+
+  if (totalScore > maxScore) {
+    maxScore = totalScore;
+    winner = player;
+  }
+});
+
+console.log(`\nLe gagnant de la partie est : ${winner} avec un score de ${maxScore} points !`);
+

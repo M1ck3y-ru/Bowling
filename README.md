@@ -32,9 +32,12 @@ https://serverspace.io/fr/support/help/how-to-install-node-js-on-ubuntu-20-04/?a
 
 ```
 ## 🚀 A PROPOS DE NOUS
-Nous deux dévellopeur débutant dans la Programation en Javascript.
+Nous sommes deux développeurs débutant dans la Programation en Javascript.
 
 ## 📌CONTACTEZ NOUS :
-
 Pour un support, email edgar.cavaillez@ynov.com ou clement.garcia@ynov.com vous pouvez nous joindre.
 
+## ⛔️ INFORMATIONS SUPPLEMENTAIRES
+Nous nous sommes aidés de prompts ainsi que de OpenAI pour la compréhension du sujet et d'évaluer les attendus.
+
+Prompt est une fonction intégrée qui permet d'afficher une boîte de dialogue modale à l'utilisateur avec un message et une zone de saisie. Elle est généralement utilisée pour obtenir une entrée de l'utilisateur.
